@@ -1,10 +1,9 @@
 const fNames = [];
 const lNames = [];
-const types = [];
+const motivations = [];
 const skills = [];
 const weaknesses = [];
-const motivations = [];
-const funFacts = []; 
+const catchphrases = []; 
 
 const characterFactory = (name, type, skills, weakness, funFact) => {
     return {
