@@ -37,7 +37,8 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 '"Live long and prosper."', '"Zoinks!"']; 
 
 
-let fullName = fNames[Math.floor(Math.random() * fNames.length)] + ' ' + lNames[Math.floor(Math.random() * lNames.length)];
+let firstName = fNames[Math.floor(Math.random() * fNames.length)];
+let lastName = lNames[Math.floor(Math.random() * lNames.length)];
 
 let motivation = motivations[Math.floor(Math.random() * motivations.length)];
 
@@ -55,9 +56,13 @@ let weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)];
 
 let catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
-const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
+const characterFactory = (fName, lName, motivation, skills, weakness, catchphrase) => {
     return {
-        name,
+        fName,
+        lName,
+        fullName() {
+            return this.fName + ' ' + this.lName;
+        },
         motivation,
         skills,
         weakness,
@@ -65,10 +70,10 @@ const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
     };
 }
 
-let character = characterFactory(fullName, motivation, skillList, weakness, catchphrase);
+let character = characterFactory(firstName, lastName, motivation, skillList, weakness, catchphrase);
 
 const finalMessage = object => {
-    return `This is ${character.name}. Their motivation is ${character.motivation}. Some of their many skills include 
-    ${character.skills}. However, they do have a weakness - ${character.weakness}. ${character.name}'s catchphrase is 
-    ${character.catchphrase}.`
+    return `This is ${character.fullName()} and ${character.fName}'s motivation in life is ${character.motivation}. 
+    Some of ${character.fName}'s many skills include ${character.skills}. However, ${character.fName} does have a 
+    weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is ${character.catchphrase}.`
 }
