@@ -23,10 +23,11 @@ const skills = ['Computer coding', 'Photographic memory', 'Cooking', 'Problem so
 'Sense of humour', 'Storytelling', 'Performing', 'Meditative ability', 'Likeability', 'Knitting', 'Juggling', 
 'Marksmanship', 'Critical thinking', 'Motorcycle riding', 'Event planning', 'Fencing', 'Yoga', 'Organising'];
 
-const weaknesses = ['Nut allergy', 'Chronic jealousy', 'Sunlight and fresh air', 'Illiterate', 'Half deaf', 
-'Chronic fatigue', 'Opiate addiction', 'Hunchback', 'Supremely gullible', 'Narrow minded', 'Chocolate bars', 
-'Physical fitness', 'Love of money', 'Social anxiety', 'Rigid worldview', 'Chronic gossiper', 'Reality TV', 
-'Alcohol', 'Music taste', 'Romance', 'Teamwork'];
+const weaknesses = ['A nut allergy', 'Chronic jealousy', 'Fear of going outside', 'Illiteracy', 
+'Hearing loss in one ear', 'Chronic fatigue', 'An opiate addiction', 'They\'re hunchbacked', 
+'They\'re supremely gullible', 'Narrow-mindedness', 'Junk food binges', 'Lack of physical fitness', 'Love of money', 
+'Social anxiety', 'A rigid worldview', 'They\'re a chronic gossiper', 'Reality TV', 'Booze', 'Music taste', 
+'Romance', 'Trusting others'];
 
 const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge open?"', '"I am the one who knocks!"', 
 '"Nobody tells me nothin!"', '"Just keep swimming."', '"Variety is the spice of life."', '"Put a sock in it!"', 
@@ -40,19 +41,19 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 let firstName = fNames[Math.floor(Math.random() * fNames.length)];
 let lastName = lNames[Math.floor(Math.random() * lNames.length)];
 
-let motivation = motivations[Math.floor(Math.random() * motivations.length)];
+let motivation = motivations[Math.floor(Math.random() * motivations.length)].toLowerCase();
 
 const makeSkillList = array => {
-    const skill1 = array[Math.floor(Math.random() * array.length)];
-    const skill2 = array[Math.floor(Math.random() * array.length)];
-    const skill3 = array[Math.floor(Math.random() * array.length)];
+    const skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    const skill2 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    const skill3 = array[Math.floor(Math.random() * array.length)].toLowerCase();
 
     return `${skill1}, ${skill2} and ${skill3}`;
 }
 
 let skillList = makeSkillList(skills);
 
-let weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)];
+let weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)].toLowerCase();
 
 let catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
@@ -73,7 +74,7 @@ const characterFactory = (fName, lName, motivation, skills, weakness, catchphras
 let character = characterFactory(firstName, lastName, motivation, skillList, weakness, catchphrase);
 
 const finalMessage = object => {
-    return `This is ${character.fullName()} and ${character.fName}'s motivation in life is ${character.motivation}. 
+    return `This is ${character.fullName()} whose motivation in life is ${character.motivation}. 
     Some of ${character.fName}'s many skills include ${character.skills}. However, ${character.fName} does have a 
-    weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is ${character.catchphrase}.`
+    weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is, ${character.catchphrase}.`
 }
