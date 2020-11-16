@@ -36,12 +36,12 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 '"What doesn\'t kill you makes you stronger - except polio"', '"No place like home!"', '"Schwing!"', '"Jinkies!"', 
 '"Live long and prosper."', '"Zoinks!"']; 
 
-const characterFactory = (name, type, skills, weakness, funFact) => {
+const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
     return {
         name,
-        type,
+        motivation,
         skills,
         weakness,
-        funFact
+        catchphrase
     };
 }
