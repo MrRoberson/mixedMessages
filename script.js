@@ -19,7 +19,11 @@ const motivations = ['To embrace chaos', 'To spread peace, love and happiness', 
 'To teach others'];
 
 const skills = [];
-const weaknesses = [];
+
+const weaknesses = ['Nut allergy', 'Chronic jealousy', 'Sunlight and fresh air', 'Illiterate', 'Half deaf', 
+'Chronic fatigue', 'Opiate addiction', 'Hunchback', 'Supremely gullible', 'Narrow minded', 'Chocolate bars', 
+'Physical fitness', 'Love of money', 'Social anxiety', 'Rigid worldview', 'Chronic gossiper', 'Reality TV', 
+'Alcohol', 'Music taste', 'Romance', 'Teamwork'];
 
 const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge open?"', '"I am the one who knocks!"', 
 '"Nobody tells me nothin!"', '"Just keep swimming."', '"Variety is the spice of life."', '"Put a sock in it!"', 
