@@ -20,7 +20,14 @@ const motivations = ['To embrace chaos', 'To spread peace, love and happiness', 
 
 const skills = [];
 const weaknesses = [];
-const catchphrases = []; 
+
+const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge open?"', '"I am the one who knocks!"', 
+'"Nobody tells me nothin!"', '"Just keep swimming."', '"Variety is the spice of life."', '"Put a sock in it!"', 
+'"Namaste."', '"The show must go on."', '"Alrighty then!"', '"You are what you eat."', '"Time to nut up or shut up."', 
+'"Resistance is futile."', '"Show me the money!"', '"Why so serious?"', 
+'"They may take our lives but they\'ll never take our freedom!"', '"Silver linings."', 
+'"What doesn\'t kill you makes you stronger - except polio"', '"No place like home!"', '"Schwing!"', '"Jinkies!"', 
+'"Live long and prosper."', '"Zoinks!"']; 
 
 const characterFactory = (name, type, skills, weakness, funFact) => {
     return {
