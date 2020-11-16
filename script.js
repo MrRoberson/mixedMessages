@@ -18,7 +18,10 @@ const motivations = ['To embrace chaos', 'To spread peace, love and happiness', 
 'To push the boundaries of human knowledge and understanding', 'To push the boundaries of human wisdom and awareness', 
 'To teach others'];
 
-const skills = [];
+const skills = ['Computer coding', 'Photographic memory', 'Cooking', 'Problem solving', 'Alchemy', 'Painting', 
+'Dancing', 'Singing', 'Writing', 'Teaching', 'Connecting with others', 'Mamba mentality', 'Pattern recognition', 
+'Sense of humour', 'Storytelling', 'Performing', 'Meditative ability', 'Likeability', 'Knitting', 'Juggling', 
+'Marksmanship', 'Critical thinking', 'Motorcycle riding', 'Event planning', 'Fencing', 'Yoga', 'Organising'];
 
 const weaknesses = ['Nut allergy', 'Chronic jealousy', 'Sunlight and fresh air', 'Illiterate', 'Half deaf', 
 'Chronic fatigue', 'Opiate addiction', 'Hunchback', 'Supremely gullible', 'Narrow minded', 'Chocolate bars', 
