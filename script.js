@@ -36,7 +36,10 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 '"What doesn\'t kill you makes you stronger - except polio"', '"No place like home!"', '"Schwing!"', '"Jinkies!"', 
 '"Live long and prosper."', '"Zoinks!"']; 
 
+
 let fullName = fNames[Math.floor(Math.random() * fNames.length)] + ' ' + lNames[Math.floor(Math.random() * lNames.length)];
+
+let motivation = motivations[Math.floor(Math.random() * motivations.length)];
 
 const makeSkillList = array => {
     const skill1 = array[Math.floor(Math.random() * array.length)];
@@ -47,6 +50,10 @@ const makeSkillList = array => {
 }
 
 let skillList = makeSkillList(skills);
+
+let weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)];
+
+let catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
 const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
     return {
