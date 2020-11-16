@@ -64,3 +64,11 @@ const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
         catchphrase
     };
 }
+
+let character = characterFactory(fullName, motivation, skillList, weakness, catchphrase);
+
+const finalMessage = object => {
+    return `This is ${character.name}. Their motivation is ${character.motivation}. Some of their many skills include 
+    ${character.skills}. However, they do have a weakness - ${character.weakness}. ${character.name}'s catchphrase is 
+    ${character.catchphrase}.`
+}
