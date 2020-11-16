@@ -38,6 +38,16 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 
 let fullName = fNames[Math.floor(Math.random() * fNames.length)] + ' ' + lNames[Math.floor(Math.random() * lNames.length)];
 
+const makeSkillList = array => {
+    const skill1 = array[Math.floor(Math.random() * array.length)];
+    const skill2 = array[Math.floor(Math.random() * array.length)];
+    const skill3 = array[Math.floor(Math.random() * array.length)];
+
+    return `${skill1}, ${skill2} and ${skill3}`;
+}
+
+let skillList = makeSkillList(skills);
+
 const characterFactory = (name, motivation, skills, weakness, catchphrase) => {
     return {
         name,
