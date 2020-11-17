@@ -74,7 +74,9 @@ const characterFactory = (fName, lName, motivation, skills, weakness, catchphras
 let character = characterFactory(firstName, lastName, motivation, skillList, weakness, catchphrase);
 
 const finalMessage = object => {
-    return `This is ${character.fullName()} whose motivation in life is ${character.motivation}. 
+    document.getElementById('toHide').innerHTML = '';
+
+    document.getElementById('display').innerHTML = `This is ${character.fullName()} whose motivation in life is ${character.motivation}. 
     Some of ${character.fName}'s many skills include ${character.skills}. However, ${character.fName} does have a 
-    weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is, ${character.catchphrase}.`
+    weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is, ${character.catchphrase}.`;
 }
