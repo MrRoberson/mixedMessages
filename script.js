@@ -79,4 +79,6 @@ const finalMessage = object => {
     document.getElementById('display').innerHTML = `This is ${character.fullName()} whose motivation in life is ${character.motivation}. 
     Some of ${character.fName}'s many skills include ${character.skills}. However, ${character.fName} does have a 
     weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is, ${character.catchphrase}.`;
+
+    document.getElementById('toShow').innerHTML = `Not satisfied with ${character.fullName()}? Feel free to try again.`;
 }
