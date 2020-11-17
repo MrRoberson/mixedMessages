@@ -37,12 +37,6 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 '"What doesn\'t kill you makes you stronger - except polio"', '"No place like home!"', '"Schwing!"', '"Jinkies!"', 
 '"Live long and prosper."', '"Zoinks!"']; 
 
-
-let firstName = fNames[Math.floor(Math.random() * fNames.length)];
-let lastName = lNames[Math.floor(Math.random() * lNames.length)];
-
-let motivation = motivations[Math.floor(Math.random() * motivations.length)].toLowerCase();
-
 const makeSkillList = array => {
     const skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
     const skill2 = array[Math.floor(Math.random() * array.length)].toLowerCase();
@@ -50,12 +44,6 @@ const makeSkillList = array => {
 
     return `${skill1}, ${skill2} and ${skill3}`;
 }
-
-let skillList = makeSkillList(skills);
-
-let weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)].toLowerCase();
-
-let catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
 
 const characterFactory = (fName, lName, motivation, skills, weakness, catchphrase) => {
     return {
@@ -71,9 +59,16 @@ const characterFactory = (fName, lName, motivation, skills, weakness, catchphras
     };
 }
 
-let character = characterFactory(firstName, lastName, motivation, skillList, weakness, catchphrase);
+const finalMessage = () => {
+    const firstName = fNames[Math.floor(Math.random() * fNames.length)];
+    const lastName = lNames[Math.floor(Math.random() * lNames.length)];
+    const motivation = motivations[Math.floor(Math.random() * motivations.length)].toLowerCase();
+    const catchphrase = catchphrases[Math.floor(Math.random() * catchphrases.length)];
+    const skillList = makeSkillList(skills);
+    const weakness = weaknesses[Math.floor(Math.random() * weaknesses.length)].toLowerCase();
 
-const finalMessage = object => {
+    const character = characterFactory(fNames[Math.floor(Math.random() * fNames.length)], lastName, motivation, skillList, weakness, catchphrase);
+
     document.getElementById('toHide').innerHTML = '';
 
     document.getElementById('display').innerHTML = `This is ${character.fullName()} whose motivation in life is ${character.motivation}. 
@@ -81,4 +76,6 @@ const finalMessage = object => {
     weakness - ${character.weakness}. ${character.fullName()}'s catchphrase in life is, ${character.catchphrase}.`;
 
     document.getElementById('toShow').innerHTML = `Not satisfied with ${character.fullName()}? Feel free to try again.`;
+
+    document.getElementById('generate').innerHTML = 'Generate Another Character';
 }
