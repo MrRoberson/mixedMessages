@@ -24,9 +24,9 @@ const skills = ['Computer coding', 'Photographic memory', 'Cooking', 'Problem so
 'Marksmanship', 'Critical thinking', 'Motorcycle riding', 'Event planning', 'Fencing', 'Yoga', 'Organising'];
 
 const weaknesses = ['A nut allergy', 'Chronic jealousy', 'Fear of going outside', 'Illiteracy', 
-'Hearing loss in one ear', 'Chronic fatigue', 'An opiate addiction', 'They\'re hunchbacked', 
-'They\'re supremely gullible', 'Narrow-mindedness', 'Junk food binges', 'Lack of physical fitness', 'Love of money', 
-'Social anxiety', 'A rigid worldview', 'They\'re a chronic gossiper', 'Reality TV', 'Booze', 'Music taste', 
+'Hearing loss in one ear', 'Chronic fatigue', 'An opiate addiction', 'A hunchback', 
+'Supreme gullibleness', 'Narrow-mindedness', 'Junk food binges', 'Lack of physical fitness', 'Love of money', 
+'Social anxiety', 'A rigid worldview', 'Chronic gossiping', 'Reality TV', 'Booze', 'Music taste', 
 'Romance', 'Trusting others'];
 
 const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge open?"', '"I am the one who knocks!"', 
@@ -38,9 +38,17 @@ const catchphrases = ['"That\'s gonna leave a mark!"', '"Who left the fridge ope
 '"Live long and prosper."', '"Zoinks!"']; 
 
 const makeSkillList = array => {
-    const skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
-    const skill2 = array[Math.floor(Math.random() * array.length)].toLowerCase();
-    const skill3 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    let skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    let skill2 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    let skill3 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+
+    if (skill1 === skill2) {
+        skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    } else if (skill1 === skill3) {
+        skill1 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    } else if (skill2 === skill3) {
+        skill2 = array[Math.floor(Math.random() * array.length)].toLowerCase();
+    }
 
     return `${skill1}, ${skill2} and ${skill3}`;
 }
@@ -79,3 +87,10 @@ const finalMessage = () => {
 
     document.getElementById('generate').innerHTML = 'Generate Another Character';
 }
+
+/*
+BUG FIXES & IMPORVEMENTS:
+- write a complete README file
+- add more values to each array
+- add some ASCII art?
+*/
